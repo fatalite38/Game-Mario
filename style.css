@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.mario-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 20px solid rgb(11, 190, 11);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #E6F6FF);
+}
+
+.barrel {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    animation: barrel-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.jump{
+    animation: mario-jump 500ms ease-out;
+}
+
+.clouds {
+    padding-top: 10px;
+    width: 260px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+
+/*definindo a animação barrel e onde ela começa e termina na tela */
+@keyframes barrel-animation { 
+    from {
+        right: -80px;
+    }
+    
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+    
+    60% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -260px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
